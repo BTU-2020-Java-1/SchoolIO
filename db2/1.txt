@@ -1,0 +1,4 @@
+id:1
+name:Soso
+sumOfMarks:7
+numberOfMarks:1

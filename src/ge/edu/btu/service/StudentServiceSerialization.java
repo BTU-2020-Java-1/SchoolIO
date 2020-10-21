@@ -5,7 +5,7 @@ import ge.edu.btu.model.Student;
 
 import java.io.*;
 
-public class StudentServiceImpl implements StudentService {
+public class StudentServiceSerialization implements StudentService {
 
     @Override
     public void saveStudent(Student student) throws SchoolException {

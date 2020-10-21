@@ -3,7 +3,7 @@ package ge.edu.btu;
 import ge.edu.btu.model.SchoolException;
 import ge.edu.btu.model.Student;
 import ge.edu.btu.service.StudentService;
-import ge.edu.btu.service.StudentServiceImpl;
+import ge.edu.btu.service.StudentServiceFormatting;
 
 import java.util.Scanner;
 
@@ -11,7 +11,7 @@ public class Runner {
 
     private static Scanner scanner = new Scanner(System.in);
 
-    private static StudentService studentService = new StudentServiceImpl();
+    private static StudentService studentService = new StudentServiceFormatting();
 
     public static void main(String[] args) {
         while (true) {
