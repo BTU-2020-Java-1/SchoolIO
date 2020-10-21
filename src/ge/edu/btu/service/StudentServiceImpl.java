@@ -8,12 +8,12 @@ import java.io.*;
 public class StudentServiceImpl implements StudentService {
 
     @Override
-    public void saveStudent(Student student) {
+    public void saveStudent(Student student) throws SchoolException {
         String path = "db/" + student.getId() + ".txt";
         try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(path))) {
             out.writeObject(student);
         } catch (IOException ex) {
-            System.out.println("დაფიქსირდა გაუთვალისწინებელი შემთხვევა, " + ex.getMessage());
+            throw new SchoolException("Can't save student");
         }
     }
 

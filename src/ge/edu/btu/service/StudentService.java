@@ -5,7 +5,7 @@ import ge.edu.btu.model.Student;
 
 public interface StudentService {
 
-    void saveStudent(Student student);
+    void saveStudent(Student student) throws SchoolException;
 
     Student readStudentById(String id) throws SchoolException;
 }

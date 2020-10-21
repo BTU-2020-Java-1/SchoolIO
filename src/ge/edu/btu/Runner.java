@@ -66,11 +66,15 @@ public class Runner {
     }
 
     private static void addStudent() {
-        System.out.println("id:");
-        String id = scanner.nextLine();
-        System.out.println("სახელი და გვარი:");
-        String name = scanner.nextLine();
-        Student student = new Student(id, name);
-        studentService.saveStudent(student);
+        try {
+            System.out.println("id:");
+            String id = scanner.nextLine();
+            System.out.println("სახელი და გვარი:");
+            String name = scanner.nextLine();
+            Student student = new Student(id, name);
+            studentService.saveStudent(student);
+        } catch (SchoolException ex) {
+            System.out.println("დაფიქსირდა გაუთვალისწინებელი შემთხვეა, " + ex.getMessage());
+        }
     }
 }
